@@ -23,5 +23,5 @@ activity_Factors = revalue(activity_Factors, c("1"="WALKING", "2"="WALKING_UPSTA
 whole_set[,"Activity"] = activity_Factors
 tidy_Dat <- data.table(whole_set)
 avg_Tidydat <- tidy_Dat[, lapply(.SD,mean), by=c("Activity","Subject")]
-write.table(avg_Tidydat, file="MeasureAvgTidySet.txt", row.names = FALSE)
-write.csv(avg_Tidydat, file="MeasureAvgTidySet.csv", row.names = FALSE)
+write.table(avg_Tidydat, file="TidyDataSet.txt", row.names = FALSE)
+write.csv(avg_Tidydat, file="TidyDataSet.csv", row.names = FALSE)
